@@ -26,5 +26,24 @@
 // const process =require('process');
 // console.log(process.argv[2])
 
+
 require('dotenv').config();
+const http = require('http');
+
 console.log(process.env.PORT);
+
+const Port = process.env.PORT || 3000;
+
+const server = http.createServer((req, res) => {
+    console.log("req url");
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write('<h1>Hello, World!</h1>');
+    res.write('<p>This is a simple HTTP server.</p>');
+
+    res.end();
+});
+
+server.listen(Port, () => {
+    console.log(`Server is running on port ${Port}`);
+});
+
