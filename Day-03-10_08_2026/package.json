@@ -1,0 +1,13 @@
+{
+  "name": "day-3",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Anveshna <anveshna2025@gmail.com>",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
