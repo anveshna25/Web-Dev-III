@@ -26,24 +26,29 @@
 // const process =require('process');
 // console.log(process.argv[2])
 
-
 require('dotenv').config();
 const http = require('http');
 
-console.log(process.env.PORT);
+// Check what PORT is coming from .env
+console.log("PORT from .env:", process.env.PORT);
 
 const Port = process.env.PORT || 3000;
 
+// Create the server
 const server = http.createServer((req, res) => {
-    console.log("req url");
+    console.log("Request received!");
+    console.log("Method:", req.method);
+    console.log("URL:", req.url);
+
     res.writeHead(200, { 'Content-Type': 'text/html' });
+
     res.write('<h1>Hello, World!</h1>');
     res.write('<p>This is a simple HTTP server.</p>');
 
     res.end();
 });
 
+// Start the server
 server.listen(Port, () => {
     console.log(`Server is running on port ${Port}`);
 });
-
