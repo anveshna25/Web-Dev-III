@@ -1,0 +1,13 @@
+{
+  "name": "day-9-28_08_2026",
+  "version": "1.0.0",
+  "description": "User & Tour CRUD REST API under Express MVC Architecture",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Anveshna <anveshna2025@gmail.com>",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
